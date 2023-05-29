@@ -42,14 +42,37 @@ Carry = AB + ACin+BCin
 
 
 ## Program:
+```
+1.Half adder:
+module exp3a(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
 
-
+2.Full adder:
+module exp3b(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire x,p,q,r;
+xor(sum,x);
+and(p,a,b);
+and(q,b,c);
+and(r,a,c);
+or(carry,p,q,r);
+endmodule
+```
 ## RTL Schematic:
+![RTL (Half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/73c2da3e-ceae-43df-afba-652d57c64cdf)
+![RTL (Full adder)](https://github.com/Anuranjana23/Adder/assets/134050204/1c3d224f-4ff4-4dad-9d32-5e0e80d7d201)
 
 
 
 
 ## Timing Diagram:
+![Timing diagram (half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/dcd152be-e2f7-4f79-b304-6737bd9eb88a)
+![Timing diagram (Full adder)](https://github.com/Anuranjana23/Adder/assets/134050204/bdb18076-5947-486b-b0b0-e320ccee8c1b)
 
 
 ## Result:
