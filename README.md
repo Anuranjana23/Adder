@@ -56,7 +56,8 @@ module exp3b(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
 wire x,p,q,r;
-xor(sum,x);
+xor(x,b,c);
+xor(sum,x,a);
 and(p,a,b);
 and(q,b,c);
 and(r,a,c);
@@ -64,15 +65,16 @@ or(carry,p,q,r);
 endmodule
 ```
 ## RTL Schematic:
-![RTL (Half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/73c2da3e-ceae-43df-afba-652d57c64cdf)
-![RTL (Full adder)](https://github.com/Anuranjana23/Adder/assets/134050204/1c3d224f-4ff4-4dad-9d32-5e0e80d7d201)
+![RTL (Half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/898018c8-096f-4a67-8cc1-3ebce1a85a9e)
+![RTL](https://github.com/Anuranjana23/Adder/assets/134050204/99f3e93a-8b00-424e-a03c-80f96ebbb3d0)
+
 
 
 
 
 ## Timing Diagram:
-![Timing diagram (half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/dcd152be-e2f7-4f79-b304-6737bd9eb88a)
-![Timing diagram (Full adder)](https://github.com/Anuranjana23/Adder/assets/134050204/bdb18076-5947-486b-b0b0-e320ccee8c1b)
+![Timing diagram (half adder)](https://github.com/Anuranjana23/Adder/assets/134050204/d8c7eb8b-0f48-4e7c-bca5-0abbb5ec54a8)
+![Timing Diagram](https://github.com/Anuranjana23/Adder/assets/134050204/491793ed-3028-41c3-86f0-0b9aa04b52ef)
 
 
 ## Result:
